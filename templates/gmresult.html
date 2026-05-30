@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>myboxgame</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <style>
+            body{
+                min-height:100dvh;
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
+                background-color:lightblue;
+                gap:clamp(15px,3dvh,30px)
+            }
+            .container{
+                width:clamp(300px,90vw,800px);
+                border:2px solid aliceblue;
+                border-radius:3vw;
+                display:grid;
+                grid-template-columns:repeat(auto-fit,minmax(70px,1fr));
+                grid-auto-rows:100px;
+                background-color:white;
+                gap:20px;
+                padding:10px
+            }
+            
+            .selection{
+                background-color:white;
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
+                width:clamp(200px,70vw,600px);
+                border:2px solid aliceblue;
+                border-radius:3vw;
+                padding-top:4vh;
+                padding-bottom:6vh;
+                font-size:clamp(20px,5vw,30px);
+               box-shadow:0px 0px 10px green 
+            }
+            select{
+               width:clamp(50px,20vw,100px);
+               height:clamp(30px,5dvh,50px);
+            }
+            div{
+                background-color:lightgrey;
+                
+            }
+            .num1{
+                box-shadow:0px 0px 10px green;
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
+                font-size:clamp(30px,5vw,50px);
+                border-radius:10px
+            }
+            .num2{
+                box-shadow:0px 0px 10px green;
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
+                font-size:clamp(30px,5vw,50px);
+                border-radius:10px
+            }
+            .num3{
+                box-shadow:0px 0px 10px green;
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
+                font-size:clamp(30px,5vw,50px);
+                border-radius:10px
+            }
+            .num4{
+                box-shadow:0px 0px 10px green;
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
+                font-size:clamp(30px,5vw,50px);
+                border-radius:10px
+            }
+            .num5{
+                box-shadow:0px 0px 10px green;
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
+                font-size:clamp(30px,5vw,50px);
+                border-radius:10px
+            }
+            .num6{
+                box-shadow:0px 0px 10px green;
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
+                font-size:clamp(30px,5vw,50px);
+                border-radius:10px
+            }
+            .num{
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                font-size:clamp(30px,5vw,50px);
+                border-radius:10px
+            }
+            .score{
+                font-size:clamp(30px,5vw,50px)
+            }
+            p{
+               font-size:clamp(20px,5vw,40px) 
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            {% if "num1" in mylist %}
+           <div class="num1"><b>{{ random1 }}</b></div>
+           {% else %}
+           <div class="num"><b>{{ random1 }}</b></div>
+           {% endif %}
+            {% if "num2" in mylist %}
+           <div class="num2"><b>{{ random2 }}</b></div>
+           {% else %}
+           <div class="num"><b>{{ random2 }}</b></div>
+           {% endif %}
+            {% if "num3" in mylist %}
+           <div class="num3"><b>{{ random3 }}</b></div>
+           {% else %}
+           <div class="num"><b>{{ random3 }}</b></div>
+           {% endif %}
+            {% if "num4" in mylist %}
+           <div class="num4"><b>{{ random4 }}</b></div>
+           {% else %}
+           <div class="num"><b>{{ random4 }}</b></div>
+           {% endif %}
+            {% if "num5" in mylist %}
+           <div class="num5"><b>{{ random5 }}</b></div>
+           {% else %}
+           <div class="num"><b>{{ random5 }}</b></div>
+           {% endif %}
+            {% if "num6" in mylist %}
+           <div class="num6"><b>{{ random6 }}</b></div>
+           {% else %}
+           <div class="num"><b>{{ random6 }}</b></div>
+           {% endif %}
+        </div>
+        <div class="selection">
+            <p>Your total score</p>
+            <div class="score"><b>{{ score }}</b></div>
+            </div>
+        </div>
+    </body>
+          </html>
+             
